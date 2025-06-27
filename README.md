@@ -10,16 +10,6 @@
 
 Rust + Cloudflare Workers +  React , example
 
-***
-* start
-```
-npm run dev
-```
-
-* react-build (other window)
-```
-npm run build
-```
 
 ***
 ### Blog
