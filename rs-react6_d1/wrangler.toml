@@ -1,0 +1,14 @@
+name = "workers-rs-6"
+main = "build/worker/shim.mjs"
+compatibility_date = "2023-03-22"
+
+assets = { directory = "./public/" }
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[[d1_databases]]
+binding = "DB"
+database_name = ""
+database_id = ""
+
