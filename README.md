@@ -2,9 +2,9 @@
 
  Version: 0.9.1
 
- date    : 2025/06/20  
+ date    : 2025/06/26  
 
- update :
+ update : 2025/06/27
 
 ***
 
@@ -23,6 +23,8 @@ npm run build
 
 ***
 ### Blog
+
+https://zenn.dev/knaka0209/scraps/9dfabd78e590a5
 
 ***
 
