@@ -37,12 +37,14 @@ function App() {
   };
 
   const handleSaveItem = async (itemData) => {
-    console.log(itemData);
+    
     if (currentItem) {
       // 更新
-      //await updateItem(currentItem.id, itemData);
+      itemData.completed = false;
+      console.log(itemData);
       await itemsApi.update(currentItem.id, itemData);
     } else {
+      console.log(itemData);
       // 新規作成
       await itemsApi.create(itemData);
     }

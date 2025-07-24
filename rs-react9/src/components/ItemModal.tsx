@@ -73,14 +73,6 @@ function ItemModal({ item, onClose, onSave }) {
     }
   };
   
-  const foods = [
-    { name: 'food_orange', label: 'オレンジ' },
-    { name: 'food_apple', label: 'りんご' },
-    { name: 'food_banana', label: 'バナナ' },
-    { name: 'food_melon', label: 'メロン' },
-    { name: 'food_grape', label: 'ぶどう' },
-  ];
-
   const pubDates = [1, 2, 3, 4, 5];
   const quantities = [1, 2, 3, 4, 5, 6];
 
@@ -111,61 +103,15 @@ function ItemModal({ item, onClose, onSave }) {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Completed */}
+                {/*
                 <div className="flex items-center">
                     <input type="checkbox" name="completed" id="completed" checked={formData.completed} onChange={handleChange} className="h-4 w-4 text-blue-600 border-gray-300 rounded" />
                     <label htmlFor="completed" className="ml-2 block text-sm text-gray-900">完了</label>
                 </div>
+                */}
 
-                {/* Content Type */}
-                <div>
-                  <label htmlFor="content_type" className="block text-sm font-medium text-gray-700">コンテンツタイプ</label>
-                  <input type="text" name="content_type" id="content_type" value={formData.content_type} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" />
-                </div>
-              </div>
-              
-              {/* Is Public */}
-              <div>
-                <span className="block text-sm font-medium text-gray-700">公開設定</span>
-                <div className="mt-2 space-x-4">
-                  <label className="inline-flex items-center">
-                    <input type="radio" name="is_public" value="true" checked={formData.is_public === true} onChange={handleChange} className="form-radio" />
-                    <span className="ml-2">公開</span>
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input type="radio" name="is_public" value="false" checked={formData.is_public === false} onChange={handleChange} className="form-radio" />
-                    <span className="ml-2">非公開</span>
-                  </label>
-                </div>
               </div>
 
-              {/* Foods */}
-              <div>
-                <span className="block text-sm font-medium text-gray-700">好きな食べ物</span>
-                <div className="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
-                  {foods.map(food => (
-                    <label key={food.name} className="inline-flex items-center">
-                      <input type="checkbox" name={food.name} checked={!!formData[food.name]} onChange={handleChange} className="form-checkbox" />
-                      <span className="ml-2">{food.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Pub Dates & Quantities */}
-              <div className="space-y-2">
-                <span className="block text-sm font-medium text-gray-700">公開日と数量</span>
-                {pubDates.map(i => (
-                  <div key={i} className="grid grid-cols-2 gap-4">
-                    <input type="date" name={`pub_date${i}`} value={formData[`pub_date${i}`]} onChange={handleChange} className="block w-full border border-gray-300 rounded-md shadow-sm p-2" />
-                    <input type="text" name={`qty${i}`} value={formData[`qty${i}`]} onChange={handleChange} placeholder={`数量 ${i}`} className="block w-full border border-gray-300 rounded-md shadow-sm p-2" />
-                  </div>
-                ))}
-                {/* qty6 */}
-                 <div className="grid grid-cols-2 gap-4">
-                    <div></div>
-                    <input type="text" name="qty6" value={formData.qty6} onChange={handleChange} placeholder="数量 6" className="block w-full border border-gray-300 rounded-md shadow-sm p-2" />
-                  </div>
-              </div>
             </div>
           </div>
           
