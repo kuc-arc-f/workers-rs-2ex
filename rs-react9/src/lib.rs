@@ -43,25 +43,6 @@ struct Todo {
 struct CreateTodoRequest {
     title: String,
     description: Option<String>,
-    content_type: Option<String>,
-    is_public: Option<bool>,
-    food_orange: Option<bool>,
-    food_apple: Option<bool>,
-    food_banana: Option<bool>,
-    food_melon: Option<bool>,
-    food_grape: Option<bool>,
-    pub_date1: Option<String>,
-    pub_date2: Option<String>,
-    pub_date3: Option<String>,
-    pub_date4: Option<String>,
-    pub_date5: Option<String>,
-    pub_date6: Option<String>,
-    qty1: Option<String>,
-    qty2: Option<String>,
-    qty3: Option<String>,
-    qty4: Option<String>,
-    qty5: Option<String>,
-    qty6: Option<String>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -75,25 +56,6 @@ struct UpdateTodoRequest {
     title: Option<String>,
     description: Option<String>,
     completed: Option<bool>,
-    content_type: Option<String>,
-    is_public: Option<bool>,
-    food_orange: Option<bool>,
-    food_apple: Option<bool>,
-    food_banana: Option<bool>,
-    food_melon: Option<bool>,
-    food_grape: Option<bool>,
-    pub_date1: Option<String>,
-    pub_date2: Option<String>,
-    pub_date3: Option<String>,
-    pub_date4: Option<String>,
-    pub_date5: Option<String>,
-    pub_date6: Option<String>,
-    qty1: Option<String>,
-    qty2: Option<String>,
-    qty3: Option<String>,
-    qty4: Option<String>,
-    qty5: Option<String>,
-    qty6: Option<String>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -113,7 +75,6 @@ async fn main(req: Request, env: Env, _ctx: Context) -> Result<Response> {
     let api_host = env.var("API_HOST")?.to_string();
     println!("API_HOST = {}", api_host);
 
-    //let body = format!("API_HOST = {}, SECRET = {}", api_host, secret_token);
     Router::new()
 
         .get_async("/api/list", handle_list_todos)
