@@ -4,7 +4,7 @@
 
  date    : 2025/06/26  
 
- update : 2025/07/24 
+ update : 2025/08/16 
 
 ***
 
@@ -12,6 +12,7 @@ Rust + Cloudflare Workers +  React , example
 
 * rustc 1.87.0
 * cargo 1.87.0
+* node 22
 
 ***
 ### Blog
