@@ -1,11 +1,14 @@
+import React, { useState, useEffect } from 'react';
 //import { Routes, Route, Link } from 'react-router-dom';
 import {Link } from 'react-router-dom';
 
 function Page() {
     return (
     <div>
-        <Link to="/">Home</Link>
-        <Link to="/about" class="ms-2">[ about ]</Link>
+        <Link to="/foo" class="ms-2">Home</Link>
+        <Link to="/todo" class="ms-2">[ Todo ]</Link>
+        <Link to="/todo13" class="ms-2">[ Todo13 ]</Link>
+        <Link to="/todo16" class="ms-2">[ Todo16 ]</Link>
         <hr />
     </div>
     );

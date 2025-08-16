@@ -1,5 +1,6 @@
 // src/App.tsx
 import React, { useState, useEffect } from 'react';
+import Head from '../components/Head';
 
 interface Item {
   id?: number;
@@ -262,6 +263,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <Head />
       <h1 className="text-3xl font-bold text-center mb-8">CRUD アプリケーション</h1>
       
       <div className="mb-6 flex justify-end">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Item, NewItem } from './types/Item';
 import { itemsApi } from './api/items';
 import ItemDialog from '../components/ItemDialog';
+import Head from '../components/Head';
 
 function App() {
   const [items, setItems] = useState<Item[]>([]);
@@ -83,6 +84,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-8">
+      <Head />
       <div className="max-w-6xl mx-auto px-4">
         <div className="bg-white rounded-lg shadow">
           <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">

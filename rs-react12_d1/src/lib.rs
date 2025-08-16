@@ -66,7 +66,7 @@ async fn main(req: Request, env: Env, _ctx: Context) -> Result<Response> {
         .post_async("/api/todo16/delete", handlers::todo16_handlers::handle_delete_todo)
         .post_async("/api/todo16/update", handlers::todo16_handlers::handle_update_todo)
 
-        .get_async("/", handle_get) 
+        .get_async("/foo", handle_get) 
         .get_async("/todo", handle_get) 
         .get_async("/todo13", handle_get) 
         .get_async("/todo16", handle_get) 

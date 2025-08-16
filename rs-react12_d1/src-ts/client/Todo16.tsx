@@ -5,6 +5,7 @@ import { Item } from './types';
 import Modal from './Todo16/Modal';
 import ItemForm from './Todo16/ItemForm';
 import { itemsApi } from './Todo16/itemsApi';
+import Head from '../components/Head';
 
 // 新規アイテムの初期値
 const emptyItem: Item = {
@@ -115,6 +116,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4 sm:p-6 lg:p-8">
+      <Head />
       <header className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-gray-800">CRUD アプリ</h1>
         <button

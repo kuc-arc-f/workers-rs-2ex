@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 
-//import Home from './client/home';
+import Home from './client/Home';
 //import Login from './client/Login';
 //import About from './client/about';
 import Todo from './client/Todo';
@@ -12,6 +12,7 @@ export default function App(){
   return(
   <div className="App">
     <Routes>
+      <Route path="/foo" element={<Home />} />
       <Route path="/todo" element={<Todo />} />
       <Route path="/todo13" element={<Todo13 />} />
       <Route path="/todo16" element={<Todo16 />} />
@@ -20,7 +21,6 @@ export default function App(){
   )
 }
 /*
-      <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/login" element={<Login />} />
 */
