@@ -65,12 +65,18 @@ async fn main(req: Request, env: Env, _ctx: Context) -> Result<Response> {
         .post_async("/api/todo16/create", handlers::todo16_handlers::handle_create_todo)
         .post_async("/api/todo16/delete", handlers::todo16_handlers::handle_delete_todo)
         .post_async("/api/todo16/update", handlers::todo16_handlers::handle_update_todo)
-
+        .get_async("/api/plan/list", handlers::plan_handlers::handle_list_plans)
+        .post_async("/api/plan/list_range", handlers::plan_handlers::handle_list_range)
+        .post_async("/api/plan/create", handlers::plan_handlers::handle_create_plan)
+        .post_async("/api/plan/delete", handlers::plan_handlers::handle_delete_plan)
+        .post_async("/api/plan/update", handlers::plan_handlers::handle_update_plan)
+        
         .get_async("/foo", handle_get) 
         .get_async("/todo", handle_get) 
         .get_async("/todo13", handle_get) 
         .get_async("/todo16", handle_get) 
         .post_async("/bar", handle_post)
+        .get_async("/plan", handle_get)
         .delete_async("/baz", handle_delete)
         .run(req, env)
         .await

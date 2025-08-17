@@ -7,7 +7,8 @@ import Home from './client/Home';
 import Todo from './client/Todo';
 import Todo13 from './client/Todo13';
 import Todo16 from './client/Todo16';
-//
+import Plan from './client/Plan';
+
 export default function App(){
   return(
   <div className="App">
@@ -16,11 +17,12 @@ export default function App(){
       <Route path="/todo" element={<Todo />} />
       <Route path="/todo13" element={<Todo13 />} />
       <Route path="/todo16" element={<Todo16 />} />
+      <Route path="/plan" element={<Plan />} />
     </Routes>
   </div>
   )
 }
 /*
-      <Route path="/about" element={<About />} />
-      <Route path="/login" element={<Login />} />
+<Route path="/about" element={<About />} />
+<Route path="/login" element={<Login />} />
 */
